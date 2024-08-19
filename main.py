@@ -14,7 +14,7 @@ def buy():
     prices = [int(prices[i].replace(',', '')) for i in range(len(prices) - 2, -1, -1)]
 
     for i in range(len(prices)):
-      if prices[i]<int(money.text):
+      if prices[i]<int(money.text.replace(",", "")):
           buttons[i].click()
           break
 
